@@ -24,8 +24,8 @@ const Header = () => {
       <Navbar.Brand href="/">My-Reads</Navbar.Brand>
       <Navbar.Toggle area-controls="navbar-nav"/>
       <Navbar.Collapse id="navbar-nav" className="justify-content-end">
-        <Nav className="">
-          { currentUser && <><h3 style={{ color: "white" }}>{currentUser.email}</h3> <Button variant="link" onClick={userout}>Sign Out</Button></> }
+        <Nav className="align-items-baseline">
+          { currentUser && <><b style={{ color: "white" }}>Welcome {currentUser.email}</b> <Button variant="link" onClick={userout}>Sign Out</Button></> }
           { !currentUser && <><Nav.Link href="/signup">Sign Up</Nav.Link><Nav.Link href="/signin">Sign In</Nav.Link></> }
         </Nav>
       </Navbar.Collapse>
